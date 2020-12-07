@@ -10,14 +10,14 @@ export class LoansComponent implements OnInit {
 
   testLoan: Loan = {
     id: 1,
-    balance: 2,
+    balance: 200,
     term: 3,
     rate: 4
   };
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

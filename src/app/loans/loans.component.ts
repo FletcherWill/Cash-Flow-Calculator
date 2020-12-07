@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Loan } from '../loan';
+import { loans } from '../loans';
 
 @Component({
   selector: 'app-loans',
@@ -8,6 +9,7 @@ import { Loan } from '../loan';
 })
 export class LoansComponent implements OnInit {
 
+  loans = loans;
   testLoan: Loan = {
     id: 1,
     balance: 200,

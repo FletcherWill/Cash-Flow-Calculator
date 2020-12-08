@@ -9,6 +9,6 @@ public class LoanItem {
 
     //calculated parameters:
     public double MonthlyPayment{ get; set; }
-     //When this is assigned wherever, call the Monthly payment function from LoanMath.cs
+     //Gets calculated in LoanItemsController when loan is posted or gotten.
     
 }

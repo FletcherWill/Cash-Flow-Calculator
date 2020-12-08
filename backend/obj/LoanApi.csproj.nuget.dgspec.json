@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
         "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\obj\\",
+=======
+    "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
+        "projectName": "LoanApi",
+        "projectPath": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
+        "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\obj\\",
+>>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danib\\AppData\\Roaming\\NuGet\\NuGet.Config"

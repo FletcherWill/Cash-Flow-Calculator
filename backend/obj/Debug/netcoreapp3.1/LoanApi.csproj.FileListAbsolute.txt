@@ -133,6 +133,7 @@ C:\Users\danib\OneDrive\Carleton\Externship MIAC\cashflow\LoanApi\bin\Debug\netc
 C:\Users\danib\OneDrive\Carleton\Externship MIAC\cashflow\LoanApi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\danib\OneDrive\Carleton\Externship MIAC\cashflow\LoanApi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\danib\OneDrive\Carleton\Externship MIAC\cashflow\LoanApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+<<<<<<< HEAD
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -268,3 +269,5 @@ C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1\LoanApi.dll
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1\LoanApi.pdb
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1\LoanApi.genruntimeconfig.cache
+=======
+>>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe

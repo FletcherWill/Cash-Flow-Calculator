@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
+=======
+  "FilePath": "c:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
+>>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",

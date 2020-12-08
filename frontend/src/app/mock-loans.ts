@@ -1,4 +1,6 @@
-export const loans = [
+import { Loan } from './loan';
+
+export const loans: Loan[] = [
   {
     id: 1,
     balance: 200,

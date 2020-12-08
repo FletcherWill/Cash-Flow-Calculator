@@ -29,7 +29,9 @@ namespace Microsoft.Collections.Generic {
          }
 
          public static LoanItem updateLoan(LoanItem loan){
-             loan.Balance = loan.Balance - loan.MonthlyPayment;
+             if (loan.Balance > 0){
+                 loan.Balance = loan.Balance - loan.MonthlyPayment;
+             }
              return loan;
          }
     }

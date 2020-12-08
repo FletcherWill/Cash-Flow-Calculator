@@ -28,7 +28,7 @@ namespace LoanApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LoanContext>(opt =>
-            opt.UseInMemoryDatabase("TodoList"));
+            opt.UseInMemoryDatabase("LoanList"));
             services.AddControllers();
         }
 

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using LoanApi.Models;
+using Microsoft.AspNetCore;
 
 namespace LoanApi
 {

@@ -38,7 +38,7 @@ namespace LoanApi.Controllers
                 return NotFound();
             }
 
-            loanItem.MonthlyPayment = loanItem.Balance * (loanItem.Rate/1200) / (1 - Math.Pow((1 + loanItem.Rate/1200), (-1 * loanItem.Term)));
+            //loanItem.MonthlyPayment = loanItem.Balance * (loanItem.Rate/1200) / (1 - Math.Pow((1 + loanItem.Rate/1200), (-1 * loanItem.Term)));
             return loanItem;
         }
 
@@ -84,7 +84,7 @@ namespace LoanApi.Controllers
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetLoanItem", new { id = loanItem.Id }, loanItem);
-            loanItem.MonthlyPayment = loanItem.Balance * (loanItem.Rate/1200) / (1 - Math.Pow((1 + loanItem.Rate/1200), (-1 * loanItem.Term)));
+            //loanItem.MonthlyPayment = loanItem.Balance * (loanItem.Rate/1200) / (1 - Math.Pow((1 + loanItem.Rate/1200), (-1 * loanItem.Term)));
             return CreatedAtAction(nameof(GetLoanItem), new { id = loanItem.Id }, loanItem);
         }
 

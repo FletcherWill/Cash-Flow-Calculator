@@ -8570,19 +8570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
       "projectName": "LoanApi",
       "projectPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
       "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
-      "projectName": "LoanApi",
-      "projectPath": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
-      "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\obj\\",
->>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danib\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8647,5 +8639,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

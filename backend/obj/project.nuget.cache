@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "QG+UswpLlyHrjXRuxlHfB5POsKEJj/ifHsBKT491MIMeu6H+0XNBmLhZGJwIAnF/iAXqoWC9WtyjC+swA99mrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
-=======
-  "dgSpecHash": "LFQR4gAuomikXOmlLV6xhIYMuDo1lvC6WGte5naY+lEi1whfE8+sqaqZ8v9oKp70JT2S2Rh3+9A91gAndUziYQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\danib\\OneDrive\\Carleton\\Externship MIAC\\cashflow\\LoanApi\\LoanApi.csproj",
->>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe
   "expectedPackageFiles": [
     "C:\\Users\\danib\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\danib\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -167,5 +161,12 @@
     "C:\\Users\\danib\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\danib\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

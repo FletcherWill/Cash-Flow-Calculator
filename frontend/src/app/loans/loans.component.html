@@ -1,10 +1,13 @@
 <h2>My Loans</h2>
 <ul class="loans">
-  <li *ngFor="let loan of loans"
+  <table>
+    <tr><th>id</th><th>balance</th><th>term</th><th>rate</th></tr>
+  <tr *ngFor="let loan of loans"
     [class.selected]="loan === selectedLoan"
     (click)="onSelect(loan)">
-    <span class="badge">{{loan.id}}</span> {{loan.balance}} {{loan.term}} {{loan.rate}}
-  </li>
+    <td>{{loan.id}}</td> <td>{{loan.balance}}</td> <td>{{loan.term}}</td> <td>{{loan.rate}}</td>
+  </tr>
+  </table>
 </ul>
 
 <div *ngIf="selectedLoan">

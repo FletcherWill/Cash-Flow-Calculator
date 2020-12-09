@@ -14,4 +14,6 @@ export class LoanService {
   getLoans(): Observable<Loan[]> {
     return of(loans);
   }
+
+  
 }

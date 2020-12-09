@@ -271,3 +271,15 @@ C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1
 C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1\LoanApi.genruntimeconfig.cache
 =======
 >>>>>>> 48bfe0223b43facbaedfbe678a36a51a36171abe
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\obj\Debug\netcoreapp3.1\LoanApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.NodeServices.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\danib\Desktop\Cash-Flow-Calculator-main\backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll

@@ -11,12 +11,17 @@ export class LoansComponent implements OnInit {
 
   // ?
   loans: Loan[] = [];
+  selectedLoan!: Loan;
 
   constructor(private loanService: LoanService) { }
 
   getLoans(): void {
     this.loanService.getLoans()
         .subscribe(loans => this.loans = loans);
+  }
+
+  onSelect(loan: Loan): void {
+    this.selectedLoan = loan;
   }
 
   ngOnInit() {

@@ -3,5 +3,4 @@ export interface Loan {
     balance: number;
     term: number;
     rate: number;
-  }
-  
+}

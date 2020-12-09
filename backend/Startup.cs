@@ -31,6 +31,7 @@ namespace LoanApi
             services.AddDbContext<LoanContext>(opt =>
             opt.UseInMemoryDatabase("LoanList"));
             services.AddControllers();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoansComponent } from './loans/loans.component';
 import { LoanDetailComponent } from './loan-detail/loan-detail.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

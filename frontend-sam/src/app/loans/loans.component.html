@@ -1,0 +1,25 @@
+<h2>My Loans</h2>
+<ul class="loans">
+  <table>
+    <tr><th>id</th><th>balance</th><th>term</th><th>rate</th></tr>
+  <tr *ngFor="let loan of loans"
+    [class.selected]="loan === selectedLoan"
+    (click)="onSelect(loan)">
+    <td>{{loan.id}}</td> <td>{{loan.balance}}</td> <td>{{loan.term}}</td> <td>{{loan.rate}}</td>
+  </tr>
+  </table>
+</ul>
+
+<div *ngIf="selectedLoan">
+
+  <h2>{{selectedLoan.id}} Details</h2>
+  <div><span>id: </span>{{selectedLoan.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedLoan.balance" placeholder="balance"/>
+      <input [(ngModel)]="selectedLoan.term" placeholder="term"/>
+      <input [(ngModel)]="selectedLoan.rate" placeholder="rate"/>
+    </label>
+  </div>
+
+</div>

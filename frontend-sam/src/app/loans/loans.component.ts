@@ -52,7 +52,9 @@ export class LoansComponent implements OnInit {
     this.loanService.updateLoan(this.loan)
       .subscribe(() => this.goBack());
   }
-*/
+  */
+
+
   ngOnInit() {
     this.getLoans();
   }

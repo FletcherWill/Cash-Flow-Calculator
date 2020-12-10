@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" href="loans.component.css">
+</head>
+
 <h2>My Loans</h2>
 <ul class="loans">
   <table>
@@ -12,8 +16,7 @@
 
 <div *ngIf="selectedLoan">
 
-  <h2>{{selectedLoan.id}} Details</h2>
-  <div><span>id: </span>{{selectedLoan.id}}</div>
+  <h2>Loan {{selectedLoan.id}} Details</h2>
   <div>
     <label>name:
       <input [(ngModel)]="selectedLoan.balance" placeholder="balance"/>

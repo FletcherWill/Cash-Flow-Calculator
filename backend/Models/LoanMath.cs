@@ -5,27 +5,27 @@ namespace Microsoft.Collections.Generic {
     public class LoanMath {
 
         //Formulas for the calculator:
-        public double monthlyPayment(LoanItem loan){ //Only called once per loan
-            double balance = loan.Balance;
-            double rate = loan.Rate;
-            int term = loan.Term;
+        public long monthlyPayment(LoanItem loan){ //Only called once per loan
+            long balance = loan.Balance;
+            long rate = loan.Rate;
+            long term = loan.Term;
             double payment = balance * (rate/1200) / Math.Pow((1 - (1 + rate/1200)), (-1 * term)); //Formula from assignment instructions.
-            return payment;
+            return (long)payment;
         }
 
-         public double interestPayment(LoanItem loan){
-             double rate = loan.Rate;
-             double balance = loan.Balance;
+         public long interestPayment(LoanItem loan){
+             long rate = loan.Rate;
+             long balance = loan.Balance;
 
-             double interest = balance * (rate / 1200);
+             long interest = balance * (rate / 1200);
              return interest;
          }
 
-         public double principalPayment(LoanItem loan){
-             double monthlyPayment = loan.MonthlyPayment;
-             double interest = interestPayment(loan);
+         public long principalPayment(LoanItem loan){
+             long monthlyPayment = loan.MonthlyPayment;
+             long interest = interestPayment(loan);
 
-             double principal = monthlyPayment - interest;
+             long principal = monthlyPayment - interest;
              return principal;
          }
 

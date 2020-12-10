@@ -10,6 +10,7 @@ using LoanApi.Models;
 namespace LoanApi.Controllers
 {
     [Route("api/[controller]")]
+    [Produces("application/json")]
     [ApiController]
     public class LoanItemsController : ControllerBase
     {

@@ -1,0 +1,14 @@
+h2 {
+    color: rgb(25, 8, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

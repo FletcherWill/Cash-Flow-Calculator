@@ -24,12 +24,14 @@ export class LoansComponent implements OnInit {
   onSelect(loan: Loan): void {
     this.selectedLoan = loan;
   }
-/*
-  save(): void {
-    this.loanService.updateLoan(this.selectedLoan)
-      .subscribe();
+
+  /*
+  save(loan: Loan): void {
+    this.loanService.updateLoan(loan)
+      .subscribe(() => this.goBack());
   }
-*/
+  */
+
 
   ngOnInit() {
     this.getLoans();

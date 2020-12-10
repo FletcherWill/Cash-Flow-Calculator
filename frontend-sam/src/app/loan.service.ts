@@ -13,32 +13,65 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 export class LoanService {
 
-  appURL: string;  // URL to app
-  loansURL: string;  // URL to web api
+  private appURL: string;  // URL to app
+  private loansURL: string;  // URL to web api
 
-  constructor(private http: HttpClient, private messageService: MessageService){
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
+  constructor(private http: HttpClient, private messageService: MessageService) {
     this.appURL = environment.appURL;
-    this.loansURL = 'api/heroes';
+    this.loansURL = 'api/loans';
   }
 
-  /** GET heroes from the server */
+  /*
+  // NEED TO CHANGE, NOT CORRECT!
   getLoans(): Observable<Loan[]> {
-    return this.http.get<Loan[]>(this.loansURL)
-      .pipe(
-        tap(_ => this.log('fetched loans')),
-        catchError(this.handleError<Loan[]>('getLoans', []))
-      );
+    this.messageService.add("All loans retrieved!");
+    return of(loans);
   }
-/*
+  */
+
+  getLoans(): Observable<Loan[]> {
+    return this.http.get<Loan[]>(this.appURL + this.loansURL).pipe(
+      tap(_ => this.log('fetched all loans')),
+      catchError(this.handleError<Loan[]>('getLoans', []))
+    );
+  }
+
+  getLoan(id: number): Observable<Loan> {
+    const url = `${this.loansURL}/${id}`;
+    return this.http.get<Loan>(url).pipe(
+      tap(_ => this.log(`fetched loan id=${id}`)),
+      catchError(this.handleError<Loan>(`getLoan id=${id}`))
+    );
+  }
+
   addLoan(loan: Loan): Observable<Loan> {
     return this.http.post<Loan>(this.loansURL, loan, this.httpOptions).pipe(
-      tap((newLoan: Loan) => this.log(`added loan w/ balance=${newLoan.balance}`)),
+      tap((newLoan: Loan) => this.log(`added loan w/ id=${newLoan.id}`)),
       catchError(this.handleError<Loan>('addLoan'))
     );
   }
- */
 
-   /** Handle Http operation that failed */
+  updateLoan(loan: Loan): Observable<any> {
+    return this.http.put(this.loansURL, loan, this.httpOptions).pipe(
+      tap(_ => this.log(`updated loan id=${loan.id}`)),
+      catchError(this.handleError<any>('updateLoan'))
+    );
+  }
+
+  deleteLoan(loan: Loan | number): Observable<Loan> {
+    const id = typeof loan === 'number' ? loan : loan.id;
+    const url = `${this.loansURL}/${id}`;
+
+    return this.http.delete<Loan>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted loan id=${id}`)),
+      catchError(this.handleError<Loan>('deleteLoan'))
+    );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
@@ -53,37 +86,9 @@ export class LoanService {
     };
   }
 
-   /** Log a LoanService message with the MessageService */
+  /** Log a message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`LoanService: ${message}`);
+    this.messageService.add(`${message}`);
   }
+
 }
-  // an attempt at writing methods that get data from backend
-  /*
-
-  getLoans(): Observable<Loan[]> {
-    this.messageService.add("All loans retrieved!");
-    return this.http.get<Loan[]>(this.appURL + this.loansURL)
-
-  getLoan(id: number): Observable<Loan> {
-      this.messageService.add("Retrieved a loan!");
-      return this.http.get<Loan>(this.appURL + this.loansURL + id);
-  }
-
-  saveLoan(Loan): Observable<Loan> {
-      this.messageService.add("Loan saved!");
-      return this.http.post<Loan>(this.appURL + this.loansURL, JSON.stringify(Loan), this.httpOptions);
-  }
-
-  updateLoan(id: number, Loan): Observable<Loan> {
-      this.messageService.add("Loan updated!");
-      return this.http.put<Loan>(this.appURL + this.loansURL + id, JSON.stringify(Loan), this.httpOptions);
-  }
-
-  deleteLoan(id: number): Observable<Loan> {
-      this.messageService.add("Loan deleted!");
-      return this.http.delete<Loan>(this.appURL + this.loansURL + id);
-  }
-
-  */
-

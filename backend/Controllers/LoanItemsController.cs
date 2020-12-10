@@ -113,6 +113,33 @@ namespace LoanApi.Controllers
             return loanItem.getLoanPaymentChart();
         }
 
+        public async Task<ActionResult<List<List<List<double>>>>> GetPoolChart(){
+            List<List<List<double>>> charts = new List<List<List<double>>>();
+            List<List<double>> chart = new List<List<double>>();
+             int maxRows = 0;
+             foreach (LoanItem loan in _context.LoanItems) {
+                 List<List<double>> tempChart = loan.getLoanPaymentChart();
+                 charts.Add(tempChart);
+                 maxRows = Math.Max(maxRows,tempChart.Count);
+             }
+             for (var row = 0; row < maxRows; row++) {
+                 List<double> insert = new List<double> {0,0,0,0};
+                 foreach (var ch in charts) {
+                     if (ch.Count > row) {
+                         List<double> chRow = ch[row];
+                         insert[0] += chRow[0];
+                         insert[1] += chRow[1];
+                         insert[2] += chRow[2];
+                         insert[3] += chRow[3];
+                     }
+                 }
+                 chart.Add(insert);
+             }
+             await _context.SaveChangesAsync();
+             return charts;
+        }
+
+
         private bool LoanItemExists(long id)
         {
             return _context.LoanItems.Any(e => e.Id == id);

@@ -1,4 +1,16 @@
 <h2>My Loans</h2>
+
+<div>
+  <label>Enter loan:
+    <input #balance placeholder="balance"/> <input #term placeholder="term"/><input #rate placeholder="rate"/>
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <!-- <button (click)="add(balance.value,term.value,rate.value);  balance.value=''; term.value=''; rate.value=''"> -->
+  <button (click)="balance.value=''; term.value=''; rate.value=''">
+    add
+  </button>
+</div>
+
 <ul class="loans">
   <table style="width:25%">
     <tr><th>id</th><th>balance</th><th>term</th><th>rate</th></tr>

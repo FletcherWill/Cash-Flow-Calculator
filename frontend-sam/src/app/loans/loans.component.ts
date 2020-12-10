@@ -1,3 +1,4 @@
+import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
 import { Loan } from '../loan';
 import { LoanService } from '../loan.service';
@@ -13,6 +14,7 @@ export class LoansComponent implements OnInit {
   // ?
   loans: Loan[] = [];
   selectedLoan!: Loan;
+  loanCount : number = 0;
 
   constructor(private loanService: LoanService, private messageService: MessageService) { }
 
@@ -24,6 +26,26 @@ export class LoansComponent implements OnInit {
   onSelect(loan: Loan): void {
     this.selectedLoan = loan;
   }
+
+  add(balance: String, term: String, rate: String): void {
+    this.loanCount++;
+    if (!balance||!term||!rate) { return; }
+    var newBalance: number = +balance;
+    var newTerm: number = +term;
+    var newRate: number = +rate;
+    var loan = { 
+      id: this.loanCount,
+      balance: newBalance,
+      term: newTerm,
+      rate: newRate }
+    this.loanService.addLoan(loan)
+      .subscribe(loan => {
+        this.loans.push(loan);
+      });
+  }
+  
+
+
   // this should update the selected loan
 /*
   save(): void {

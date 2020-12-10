@@ -105,6 +105,14 @@ namespace LoanApi.Controllers
             return loanItem;
         }
 
+        public async Task<ActionResult<List<List<double>>>> getLoanChart(LoanItem loanItem){
+            _context.LoanItems.Add(loanItem);
+            await _context.SaveChangesAsync();
+
+
+            return loanItem.getLoanPaymentChart();
+        }
+
         private bool LoanItemExists(long id)
         {
             return _context.LoanItems.Any(e => e.Id == id);

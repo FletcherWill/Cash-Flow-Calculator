@@ -5,7 +5,7 @@ namespace Microsoft.Collections.Generic {
     public class LoanMath {
 
         //Formulas for the calculator:
-        public long monthlyPayment(LoanItem loan){ //Only called once per loan
+        public static long monthlyPayment(LoanItem loan){ //Only called once per loan
             long balance = loan.Balance;
             long rate = loan.Rate;
             long term = loan.Term;
@@ -13,7 +13,7 @@ namespace Microsoft.Collections.Generic {
             return (long)payment;
         }
 
-         public long interestPayment(LoanItem loan){
+         public static long interestPayment(LoanItem loan){
              long rate = loan.Rate;
              long balance = loan.Balance;
 
@@ -21,7 +21,7 @@ namespace Microsoft.Collections.Generic {
              return interest;
          }
 
-         public long principalPayment(LoanItem loan){
+         public static long principalPayment(LoanItem loan){
              long monthlyPayment = loan.MonthlyPayment;
              long interest = interestPayment(loan);
 
@@ -29,12 +29,12 @@ namespace Microsoft.Collections.Generic {
              return principal;
          }
 
-         public LoanItem updateLoan(LoanItem loan){
+         public static LoanItem updateLoan(LoanItem loan){
              loan.Balance = loan.Balance - loan.MonthlyPayment;
              return loan;
          }
 
-         public List<List<double>> getLoanPaymentChart(LoanItem loan){
+         public static List<List<double>> getLoanPaymentChart(LoanItem loan){
             // probably need to copy loan
             LoanItem Loan = new LoanItem(){Id = loan.Id, Balance = loan.Balance, Term = loan.Term, Rate = loan.Rate};
             Loan.MonthlyPayment = monthlyPayment(Loan);
@@ -53,7 +53,7 @@ namespace Microsoft.Collections.Generic {
             return loanPaymentChart;
          }
 
-         public List<List<double>> getPooledChart(List<LoanItem> loans){
+         public static List<List<double>> getPooledChart(List<LoanItem> loans){
              List<List<List<double>>> charts = new List<List<List<double>>>();
              List<List<double>> chart = new List<List<double>>();
              int maxRows = 0;
@@ -79,7 +79,7 @@ namespace Microsoft.Collections.Generic {
              
          }
 
-         public string chartToString(List<List<double>> chart) {
+         public static string chartToString(List<List<double>> chart) {
              string str = "";
              foreach (var row in chart) {
                  foreach (var num in row) {

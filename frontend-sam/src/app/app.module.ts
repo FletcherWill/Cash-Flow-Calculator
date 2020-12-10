@@ -7,13 +7,15 @@ import { LoansComponent } from './loans/loans.component';
 import { LoanDetailComponent } from './loan-detail/loan-detail.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
-    LoanDetailComponent
+    LoanDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

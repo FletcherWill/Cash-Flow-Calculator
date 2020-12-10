@@ -53,7 +53,7 @@ namespace Microsoft.Collections.Generic {
             return loanPaymentChart;
          }
 
-         public List<List<double>> getCharts(List<LoanItem> loans){
+         public List<List<double>> getPooledChart(List<LoanItem> loans){
              List<List<List<double>>> charts = new List<List<List<double>>>();
              List<List<double>> chart = new List<List<double>>();
              int maxRows = 0;
@@ -78,5 +78,17 @@ namespace Microsoft.Collections.Generic {
              return chart;
              
          }
+
+         public string chartToString(List<List<double>> chart) {
+             string str = "";
+             foreach (var row in chart) {
+                 foreach (var num in row) {
+                     str += num.ToString() + ",";
+                 }
+                 str.Remove(str.Length - 1, 1);
+                 str += ";";
+             }
+             return str;
+        }
     }
 }

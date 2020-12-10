@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
+  "FilePath": "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/LoanApi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -10,6 +10,7 @@
     ]
   },
   "ProjectWorkspaceState": {
+<<<<<<< HEAD
     "TagHelpers": [
       {
         "HashCode": 2012882598,
@@ -14442,6 +14443,9 @@
         }
       }
     ],
+=======
+    "TagHelpers": [],
+>>>>>>> 0dbd750a096c6af41993facc3ab2dd496bdaa5ec
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "LoanApi",

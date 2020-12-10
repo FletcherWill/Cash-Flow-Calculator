@@ -22,7 +22,7 @@ export class LoanService {
 
   // NEED TO CHANGE, NOT CORRECT!
   getLoans(): Observable<Loan[]> {
-    this.messageService.add("LoanService: fetched all loans");
+    this.messageService.add("Retrieved all loans");
     return of(loans);
   }
   
@@ -30,22 +30,26 @@ export class LoanService {
   /*
 
   getLoans(): Observable<Loan[]> {
-    this.messageService.add("LoanService: fetched all loans");
+    this.messageService.add("All loans retrieved!");
     return this.http.get<Loan[]>(this.appURL + this.loansURL)
 
   getLoan(id: number): Observable<Loan> {
+      this.messageService.add("Retrieved a loan!");
       return this.http.get<Loan>(this.appURL + this.loansURL + id);
   }
-  
+
   saveLoan(Loan): Observable<Loan> {
+      this.messageService.add("Loan saved!");
       return this.http.post<Loan>(this.appURL + this.loansURL, JSON.stringify(Loan), this.httpOptions);
   }
 
   updateLoan(id: number, Loan): Observable<Loan> {
+      this.messageService.add("Loan updated!");
       return this.http.put<Loan>(this.appURL + this.loansURL + id, JSON.stringify(Loan), this.httpOptions);
   }
 
   deleteLoan(id: number): Observable<Loan> {
+      this.messageService.add("Loan deleted!");
       return this.http.delete<Loan>(this.appURL + this.loansURL + id);
   }
 

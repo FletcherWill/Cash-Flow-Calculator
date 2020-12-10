@@ -23,7 +23,6 @@ export class LoansComponent implements OnInit {
 
   onSelect(loan: Loan): void {
     this.selectedLoan = loan;
-    this.messageService.add(`Selected loan ${loan.id}`);
   }
 
   ngOnInit() {

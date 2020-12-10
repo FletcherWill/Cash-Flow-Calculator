@@ -44,6 +44,11 @@ export class LoansComponent implements OnInit {
         this.loans.push(loan);
       });
   }
+
+  deleteLoan(loan: Loan): void {
+    this.loanService.deleteLoan(loan)
+      .subscribe(loans => this.selectedLoan = loans);
+  }
   
   updateLoan(loan: Loan): void {
     var newBalance: number = +loan.balance;

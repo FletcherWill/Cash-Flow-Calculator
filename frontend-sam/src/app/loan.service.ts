@@ -57,7 +57,7 @@ export class LoanService {
   }
 
   updateLoan(loan: Loan): Observable<Loan> {
-    console.log(JSON.stringify(loan));
+    //console.log(JSON.stringify(loan));
     const id = typeof loan === 'number' ? loan : loan.id;
     const url = `${this.loansURL}/${id}`;
     

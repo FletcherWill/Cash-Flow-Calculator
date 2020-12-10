@@ -20,7 +20,7 @@ namespace Microsoft.Collections.Generic {
              long interest = balance * (rate / 1200);
              return interest;
          }
-
+        /*
          public static long principalPayment(LoanItem loan){
              long monthlyPayment = loan.MonthlyPayment;
              long interest = interestPayment(loan);
@@ -33,7 +33,6 @@ namespace Microsoft.Collections.Generic {
              loan.Balance = loan.Balance - loan.MonthlyPayment;
              return loan;
          }
-
          public static List<List<double>> getLoanPaymentChart(LoanItem loan){
             // probably need to copy loan
             LoanItem Loan = new LoanItem(){Id = loan.Id, Balance = loan.Balance, Term = loan.Term, Rate = loan.Rate};
@@ -90,5 +89,6 @@ namespace Microsoft.Collections.Generic {
              }
              return str;
         }
+        */
     }
 }

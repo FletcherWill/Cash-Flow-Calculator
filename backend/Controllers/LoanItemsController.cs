@@ -106,15 +106,27 @@ namespace LoanApi.Controllers
             return loanItem;
         }
 
-        /*
-        public async Task<ActionResult<List<List<double>>>> getLoanChart(LoanItem loanItem){
-            _context.LoanItems.Add(loanItem);
-            await _context.SaveChangesAsync();
+        private bool LoanItemExists(long id)
+        {
+            return _context.LoanItems.Any(e => e.Id == id);
+        }
 
+        
+        [HttpGet("flow/{id}")]
+        public async Task<ActionResult<List<List<double>>>> getLoanChart(long id){
+            Console.WriteLine("here");
+            var loanItem = await _context.LoanItems.FindAsync(id);
+            
+            if (loanItem == null)
+            {
+                return NotFound();
+            }
 
+            Console.WriteLine("loan item found");
             return loanItem.getLoanPaymentChart();
         }
 
+        [HttpGet("/flow")]
         public async Task<ActionResult<List<List<List<double>>>>> GetPoolChart(){
             List<List<List<double>>> charts = new List<List<List<double>>>();
             List<List<double>> chart = new List<List<double>>();
@@ -140,11 +152,6 @@ namespace LoanApi.Controllers
              await _context.SaveChangesAsync();
              return charts;
         }
-        */
 
-        private bool LoanItemExists(long id)
-        {
-            return _context.LoanItems.Any(e => e.Id == id);
-        }
     }
 }

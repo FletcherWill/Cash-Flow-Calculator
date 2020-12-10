@@ -56,8 +56,12 @@ export class LoanService {
     );
   }
 
-  updateLoan(loan: Loan): Observable<any> {
-    return this.http.put(this.loansURL, loan, this.httpOptions).pipe(
+  updateLoan(loan: Loan): Observable<Loan> {
+    console.log(JSON.stringify(loan));
+    const id = typeof loan === 'number' ? loan : loan.id;
+    const url = `${this.loansURL}/${id}`;
+    
+    return this.http.put<Loan>(url, JSON.stringify(loan), this.httpOptions).pipe(
       tap(_ => this.log(`updated loan id=${loan.id}`)),
       catchError(this.handleError<any>('updateLoan'))
     );

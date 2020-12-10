@@ -21,6 +21,7 @@ namespace LoanApi.Controllers
             _context = context;
         }
 
+
         // GET: api/LoanItems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LoanItem>>> GetLoanItems()
@@ -105,6 +106,7 @@ namespace LoanApi.Controllers
             return loanItem;
         }
 
+        /*
         public async Task<ActionResult<List<List<double>>>> getLoanChart(LoanItem loanItem){
             _context.LoanItems.Add(loanItem);
             await _context.SaveChangesAsync();
@@ -138,7 +140,7 @@ namespace LoanApi.Controllers
              await _context.SaveChangesAsync();
              return charts;
         }
-
+        */
 
         private bool LoanItemExists(long id)
         {

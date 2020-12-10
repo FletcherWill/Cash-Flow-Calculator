@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
 import { Loan } from '../loan';
@@ -42,6 +43,19 @@ export class LoansComponent implements OnInit {
       .subscribe(loan => {
         this.loans.push(loan);
       });
+  }
+  
+  updateLoan(loan: Loan): void {
+    var newBalance: number = +loan.balance;
+    var newTerm: number = +loan.term;
+    var newRate: number = +loan.rate;
+    loan = { 
+      id: loan.id,
+      balance: newBalance,
+      term: newTerm,
+      rate: newRate}
+    this.loanService.updateLoan(loan)
+      .subscribe(loan => this.selectedLoan = loan);
   }
   
 

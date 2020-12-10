@@ -31,8 +31,7 @@
       <input [(ngModel)]="selectedLoan.term" placeholder="term"/>
       <input [(ngModel)]="selectedLoan.rate" placeholder="rate"/>
     </label>
-<!-- <button (click)="save()">save</button> -->
-    <button>save</button>
+  <button (click)="updateLoan(selectedLoan)">save</button>
 
   </div>
 

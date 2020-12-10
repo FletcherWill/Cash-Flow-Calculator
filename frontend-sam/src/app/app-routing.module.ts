@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component'; 
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' }
+  { path: '', component: AppComponent, pathMatch: 'full' },
+  { path: 'loans', component: AppComponent, pathMatch: 'full' }
 ];
 
 

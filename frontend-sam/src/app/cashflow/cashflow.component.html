@@ -2,8 +2,8 @@
 <ul class="cashflows">
   <table *ngFor="let cashflow of cashflows" style="width:35%">
     <tr><th>Month</th><th>Interest</th><th>Principal</th><th>Remaining Balance</th></tr>
-  <tr *ngFor="let month of cashflow.months">
-    <td>{{month.id}}</td> <td>{{month.interest}}</td> <td>{{loan.principal}}</td> <td>{{loan.balance}}%</td>
+  <tr *ngFor="let month of cashflow.Loan">
+    <td>{{month.id}}</td> <td>{{month.interest}}</td> <td>{{month.principal}}</td> <td>{{month.balance}}%</td>
   </tr>
   </table>
 </ul>

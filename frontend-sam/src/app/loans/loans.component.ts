@@ -62,16 +62,6 @@ export class LoansComponent implements OnInit {
     this.loanService.updateLoan(loan)
       .subscribe(loan => this.selectedLoan = loan);
   }
-  
-
-
-  // this should update the selected loan
-/*
-  save(): void {
-    this.loanService.updateLoan(this.loan)
-      .subscribe(() => this.goBack());
-  }
-  */
 
 
   ngOnInit() {

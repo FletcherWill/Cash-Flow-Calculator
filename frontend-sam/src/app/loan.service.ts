@@ -6,7 +6,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from './message.service';
 import { environment } from 'src/environments/environment';
 import { catchError, map, tap } from 'rxjs/operators';
-import { LoanDetailComponent } from './loan-detail/loan-detail.component';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +15,7 @@ export class LoanService {
 
   private appURL: string;  // URL to app
   private loansURL: string;  // URL to web api
+  private flowURL: string;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -24,6 +24,7 @@ export class LoanService {
   constructor(private http: HttpClient, private messageService: MessageService) {
     this.appURL = 'https://localhost:5001/';
     this.loansURL = 'api/LoanItems';
+    this.flowURL = 'flow';
   }
 
   /*
@@ -74,6 +75,16 @@ export class LoanService {
     return this.http.delete<Loan>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted loan id=${id}`)),
       catchError(this.handleError<Loan>('deleteLoan'))
+    );
+  }
+
+  //Doesn't have all the implementation yet. not really sure how to implement.
+  getLoanChart(loan : Loan): Observable<Loan> {
+    const id = typeof loan === 'number' ? loan : loan.id;
+    const url = `${this.loansURL}/${this.flowURL}/${id}`;
+    return this.http.get<Loan>(url).pipe(
+      tap(_ => this.log(`fetched loan chart id=${id}`)),
+      catchError(this.handleError<Loan>(`getLoan chart id=${id}`))
     );
   }
 

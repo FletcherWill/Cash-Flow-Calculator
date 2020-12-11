@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj": {}
+    "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/LoanApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj": {
+    "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/LoanApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
+        "projectUniqueName": "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/LoanApi.csproj",
         "projectName": "LoanApi",
-        "projectPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\LoanApi.csproj",
-        "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danib\\Desktop\\Cash-Flow-Calculator-main\\backend\\obj\\",
+        "projectPath": "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/LoanApi.csproj",
+        "packagesPath": "/Users/willfletcher/.nuget/packages/",
+        "outputPath": "/Users/willfletcher/Desktop/MIAC Externship/Cash-Flow-Calculator/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danib\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/willfletcher/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.SpaServices": {
               "target": "Package",
@@ -73,6 +75,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.8, 3.1.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
